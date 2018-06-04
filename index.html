@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>main page</title>
+	<link rel="stylesheet" type="text/css" href="css\style.css">
+</head>
+<body>
+<div id="main">
+	{{message}}
+	<div id="result">
+		<input type="text" id="text">
+			<div id="but">
+				<button id="buttonChar" @click="numClickButton()">(</button>
+				<button id="buttonChar">)</button>
+				<button id="buttonChar">%</button>
+				<button id="buttonChar">CE</button>
+				<button id="buttonNum">7</button>
+				<button id="buttonNum">8</button>
+				<button id="buttonNum">9</button>
+				<button id="buttonChar">/</button>
+				<button id="buttonNum">4</button>
+				<button id="buttonNum">5</button>
+				<button id="buttonNum">6</button>				
+				<button id="buttonChar">x</button>				
+				<button id="buttonNum">1</button>				
+				<button id="buttonNum">2</button>				
+				<button id="buttonNum">3</button>				
+				<button id="buttonChar">-</button>				
+				<button id="buttonNum">0</button>				
+				<button id="buttonChar">.</button>				
+				<button id="buttonEq">=</button>				
+				<button id="buttonChar">+</button>				
+			</div>
+		
+	</div>
+
+</div>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript" src="scripts/SuperScript.js"></script>
+</html>

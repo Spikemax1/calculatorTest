@@ -1,0 +1,50 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+#main{
+	border: 1px double #7A072D;
+	height: 300px;
+	width: 300px;
+	border-radius: 5px;
+	background: #E9E9E9
+}
+
+#result{
+	margin: 40px 20px;
+	position: relative;
+}
+
+#text{
+	width: 220px;
+	height: 20px;
+	border-radius: 5px;
+	border: 2px #1E497A solid;
+	margin-bottom: 5px;
+	margin-left: 10px;
+	background: #C5C1FF;
+	direction:rtl;
+	padding: 0px 7px;
+}
+
+#but{
+	margin: 10px 10px;
+}
+
+#buttonNum, #buttonChar, #buttonEq{
+	cursor: pointer;
+	padding: 5px;
+	margin:  5px;
+	width: 45px;
+}
+#buttonEq{
+	background: blue;
+	color: white;
+}
+#buttonNum{
+	background: linear-gradient(to top, #F4EAEA, #D3C4C4);
+}
+#buttonChar{
+	background: linear-gradient(to top, #9B9B9B, #565656);
+	color: white;
+}
