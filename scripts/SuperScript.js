@@ -2,28 +2,33 @@ var main = new Vue({
 	el: '#main',
 	data: {
 		textArea: '',
-		resultData: [
-			{
-				num: 44,
-				do: '+'
-			}
-		]
+		number: '',
+		listWillDo: [],
+		listNum: []
 	},
 	methods: {
 		numClickButton: function() {		
 			//this.resultData.push(parseFloat(this.resultText().value))
-			
+			var elem = 	event.target.innerHTML
 			this.textArea += event.target.innerHTML
 		},
 		charClickButton: function(){
-			
-			this.resultData.push({num: this.textArea, do: event.target.innerHTML})
-			this.textArea += event.target.innerHTML
+			var elem = 	event.target.innerHTML
+			var a = this.listWillDo.length-1
+			if (this.listWillDo[a] != elem) {
+					
+						this.listWillDo.push(elem)
+						this.textArea += event.target.innerHTML
+						
+					
+
+				}
+
 		},
 
 		resetText: function(){
 			this.textArea = ''
-			this.resultData = []
+			this.listWillDo = []
 		},
 		point: function(){
 			
@@ -33,7 +38,7 @@ var main = new Vue({
 		},
 		endResult: function(){
 			
-			console.log(this.textArea)
+			console.log(this.listWillDo)
 		}
 	}
 })

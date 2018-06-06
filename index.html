@@ -22,7 +22,7 @@
 				<button id="buttonNum" @click="numClickButton">4</button>
 				<button id="buttonNum" @click="numClickButton">5</button>
 				<button id="buttonNum" @click="numClickButton">6</button>				
-				<button id="buttonChar">x</button>				
+				<button id="buttonChar" @click="charClickButton">x</button>				
 				<button id="buttonNum" @click="numClickButton">1</button>				
 				<button id="buttonNum" @click="numClickButton">2</button>				
 				<button id="buttonNum" @click="numClickButton">3</button>				
@@ -35,7 +35,7 @@
 		
 	</div>
 	<ul>
-		<li v-for= "a in resultData">{{ a }}</li>
+		<li v-for= "a in listWillDo">{{ a }}</li>
 	</ul>
 </div>
 

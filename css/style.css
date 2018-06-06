@@ -1,6 +1,7 @@
 body{
 	margin: 0px;
 	padding: 0px;
+	background: lightslategrey;
 }
 #main{
 	border: 1px double #7A072D;
