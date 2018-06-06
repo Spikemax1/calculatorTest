@@ -1,16 +1,40 @@
 var main = new Vue({
 	el: '#main',
 	data: {
-		message: 'Hi'
+		textArea: '',
+		resultData: [
+			{
+				num: 44,
+				do: '+'
+			}
+		]
 	},
 	methods: {
-		resultText: function(){
-			return document.querySelector('#text')
+		numClickButton: function() {		
+			//this.resultData.push(parseFloat(this.resultText().value))
+			
+			this.textArea += event.target.innerHTML
 		},
-		numClickButton: function() {
-			var elem = event.target.innerHTML
-			var char = this.resultText()
-			char.value += elem
+		charClickButton: function(){
+			
+			this.resultData.push({num: this.textArea, do: event.target.innerHTML})
+			this.textArea += event.target.innerHTML
+		},
+
+		resetText: function(){
+			this.textArea = ''
+			this.resultData = []
+		},
+		point: function(){
+			
+			if (this.textArea.split('.').length == 1) {
+				this.textArea += '.'
+			} 
+		},
+		endResult: function(){
+			
+			console.log(this.textArea)
 		}
 	}
 })
+

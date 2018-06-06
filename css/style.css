@@ -25,6 +25,7 @@ body{
 	background: #C5C1FF;
 	direction:rtl;
 	padding: 0px 7px;
+	color: #8B0000;
 }
 
 #but{
@@ -36,6 +37,7 @@ body{
 	padding: 5px;
 	margin:  5px;
 	width: 45px;
+	color: #00008B;
 }
 #buttonEq{
 	background: blue;

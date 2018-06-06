@@ -3,37 +3,40 @@
 <head>
 	<title>main page</title>
 	<link rel="stylesheet" type="text/css" href="css\style.css">
+	<meta charset="utf-8">
 </head>
 <body>
+	<li onClick="alert(this.innerHTML)">1111</li>
 <div id="main">
-	{{message}}
 	<div id="result">
-		<input type="text" id="text">
+		<input type="text" id="text" v-model='textArea'>
 			<div id="but">
-				<button id="buttonChar" @click="numClickButton()">(</button>
-				<button id="buttonChar">)</button>
-				<button id="buttonChar">%</button>
-				<button id="buttonChar">CE</button>
-				<button id="buttonNum">7</button>
-				<button id="buttonNum">8</button>
-				<button id="buttonNum">9</button>
-				<button id="buttonChar">/</button>
-				<button id="buttonNum">4</button>
-				<button id="buttonNum">5</button>
-				<button id="buttonNum">6</button>				
+				<button id="buttonChar" @click="charClickButton">(</button>
+				<button id="buttonChar" @click="charClickButton">)</button>
+				<button id="buttonChar" @click="charClickButton">%</button>
+				<button id="buttonChar" @click="resetText">CE</button>
+				<button id="buttonNum" @click="numClickButton">7</button>
+				<button id="buttonNum" @click="numClickButton">8</button>
+				<button id="buttonNum" @click="numClickButton">9</button>
+				<button id="buttonChar" @click="charClickButton">/</button>
+				<button id="buttonNum" @click="numClickButton">4</button>
+				<button id="buttonNum" @click="numClickButton">5</button>
+				<button id="buttonNum" @click="numClickButton">6</button>				
 				<button id="buttonChar">x</button>				
-				<button id="buttonNum">1</button>				
-				<button id="buttonNum">2</button>				
-				<button id="buttonNum">3</button>				
-				<button id="buttonChar">-</button>				
-				<button id="buttonNum">0</button>				
-				<button id="buttonChar">.</button>				
-				<button id="buttonEq">=</button>				
-				<button id="buttonChar">+</button>				
+				<button id="buttonNum" @click="numClickButton">1</button>				
+				<button id="buttonNum" @click="numClickButton">2</button>				
+				<button id="buttonNum" @click="numClickButton">3</button>				
+				<button id="buttonChar" @click="charClickButton">-</button>				
+				<button id="buttonNum" @click="numClickButton">0</button>				
+				<button id="buttonChar" @click="point">.</button>				
+				<button id="buttonEq" @click="endResult">=</button>				
+				<button id="buttonChar" @click="charClickButton">+</button>				
 			</div>
 		
 	</div>
-
+	<ul>
+		<li v-for= "a in resultData">{{ a }}</li>
+	</ul>
 </div>
 
 
